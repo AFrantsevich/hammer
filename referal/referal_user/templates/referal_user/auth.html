@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <h1>Please enter code</h1>
+    <input name="otp" type="text">
+    <button type="submit">Sumbit</button>
+    <br>
+    <span style="color:red;">{% if error %} {{ error }} {% endif %}</span>
+</form>
+</body>
+</html>

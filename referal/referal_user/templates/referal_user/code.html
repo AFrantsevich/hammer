@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <h1>Please enter phone from sms message</h1>
+    <input name="phone" type="text">
+    <br>
+    <span style="color:red;">{% if error %} {{ error }} {% endif %}</span>
+    <br>
+    <span style="color:green;"> Your code: {% if code %} {{ code }} {% endif %}</span>
+    <br>
+    <br>
+    <button type="submit">Sumbit</button>
+</form>
+</body>
+</html>
